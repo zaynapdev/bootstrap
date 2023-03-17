@@ -1,0 +1,125 @@
+// Общие стили :::::::::
+
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+
+h1{
+    color: #00386D;
+    font-weight: 800;
+}
+
+// Конец общих стилей.........
+
+// Стили для головы (header) :::::::
+
+.row{
+    padding: 20px 70px;
+
+    &__ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    &__nav{
+        flex-direction: column;
+        padding-top: 20px;
+        font-weight: 600;
+    }
+}
+
+// Конец стилей для головы ...........
+
+// Стили для мэйна :::::::::
+
+.section{
+    background-image: url('../img/img.jpeg');
+    background-size: cover;
+
+    &__row{
+        padding: 180px 70px 240px;
+    }
+
+    &__btn{
+        transition: .3s;
+    }
+}
+
+.inspiration{
+    padding: 70px;
+    justify-content: space-around;
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__imgs{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        margin-bottom: 90px;
+    }
+
+    &__img{
+        width: 32%;
+    }
+
+    &__big{
+        width: 65%;
+    }
+
+    &__small{
+        width: 33%;
+    }
+}
+
+// Конец стилей для мэйна .........
+
+// Стили для футер ::::::::::
+
+footer{
+    height: 90px;
+    background-color: #BDCDDD;
+}
+
+// адаптивность :::::::::::
+
+@media screen and (max-width: 992px) {
+    .inspiration{
+        &__imgs{
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            img{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .row__ul{
+        flex-direction: column;
+    }
+
+    .inspiration__imgs img{
+        width: 100%;
+    }
+}
